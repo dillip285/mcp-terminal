@@ -1,0 +1,6 @@
+feat: Initial commit
+
+- Add MCP terminal server implementation
+- Add GitHub Actions for npm publishing
+- Add release management scripts
+- Add project documentation
