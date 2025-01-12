@@ -9,7 +9,7 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # Explicitly using 22.04 for stability
     permissions:
       contents: read
       packages: write
@@ -26,6 +26,8 @@ jobs:
       
       - name: Install dependencies
         run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Run tests
         run: npm test
@@ -37,3 +39,12 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check publish status
+        run: |
+          if npm view @dillip285/mcp-terminal@${{ github.event.release.tag_name }} version; then
+            echo "Package published successfully!"
+          else
+            echo "Package publish failed!"
+            exit 1
+          fi
