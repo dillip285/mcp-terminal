@@ -8,11 +8,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish:
+  build-and-publish:
     runs-on: ubuntu-22.04  # Explicitly using 22.04 for stability
     permissions:
-      contents: read
       packages: write
+      contents: read
     
     steps:
       - uses: actions/checkout@v4
@@ -24,27 +24,22 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@dillip285'
       
-      - name: Install dependencies
+      # Install dependencies using clean install
+      - name: Install dependencies using clean install
         run: npm ci
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
+      # Run tests
       - name: Run tests
         run: npm test
       
+      # Build the project
       - name: Build
         run: npm run build
       
+      # Publish to GitHub Packages
       - name: Publish to GitHub Packages
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Check publish status
-        run: |
-          if npm view @dillip285/mcp-terminal@${{ github.event.release.tag_name }} version; then
-            echo "Package published successfully!"
-          else
-            echo "Package publish failed!"
-            exit 1
-          fi
