@@ -4,6 +4,7 @@
   "description": "MCP Terminal Server - Execute commands within allowed paths",
   "type": "module",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "bin": {
     "mcp-terminal": "./build/index.js"
   },
@@ -28,9 +29,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/indiestack/mcp-terminal.git"
+    "url": "https://github.com/dillip285/mcp-terminal.git"
   },
-  "author": "indiestack",
+  "homepage": "https://github.com/dillip285/mcp-terminal#readme",
+  "bugs": {
+    "url": "https://github.com/dillip285/mcp-terminal/issues"
+  },
+  "author": "dillip285",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
