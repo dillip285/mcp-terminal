@@ -1,5 +1,5 @@
 {
-  "name": "@dillip285/mcp-terminal",
+  "name": "@indiestack/mcp-terminal",
   "version": "1.0.0",
   "description": "MCP Terminal Server - Execute commands within allowed paths",
   "type": "module",
@@ -26,14 +26,11 @@
     "command-line",
     "model-context-protocol"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dillip285/mcp-terminal.git"
+    "url": "https://github.com/indiestack/mcp-terminal.git"
   },
-  "author": "dillip285",
+  "author": "indiestack",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
