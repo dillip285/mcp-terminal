@@ -1,5 +1,5 @@
 {
-  "name": "mcp-terminal-cli",
+  "name": "mcp-terminal",
   "version": "1.0.0",
   "description": "MCP Terminal Server - Execute commands within allowed paths",
   "type": "module",
