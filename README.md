@@ -2,6 +2,8 @@
 
 A secure Model Context Protocol (MCP) server for executing terminal commands. This server allows Large Language Models to safely execute commands within allowed paths.
 
+<a href="https://glama.ai/mcp/servers/xw5mtbhi5g"><img width="380" height="200" src="https://glama.ai/mcp/servers/xw5mtbhi5g/badge" alt="Terminal Server MCP server" /></a>
+
 ## Installation
 
 ```bash
