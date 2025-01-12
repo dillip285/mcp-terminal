@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-and-publish:
-    runs-on: ubuntu-22.04  # Explicitly using 22.04 for stability
+    runs-on: ubuntu-22.04
     permissions:
       packages: write
       contents: read
@@ -24,9 +24,9 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@dillip285'
       
-      # Install dependencies using clean install
-      - name: Install dependencies using clean install
-        run: npm ci
+      # Changed from npm ci to npm install
+      - name: Install dependencies
+        run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
