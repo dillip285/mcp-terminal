@@ -20,7 +20,7 @@ Add the server configuration to your Claude Desktop config file:
     "terminal": {
       "command": "npx",
       "args": [
-        "@dillip285/mcp-terminal",
+        "@indiestack/mcp-terminal",
         "--allowed-paths",
         "/path/to/allowed/directory"
       ]
@@ -34,7 +34,6 @@ Restart Claude Desktop to apply the changes. You can now use the terminal capabi
 ## Available Tools
 
 - `execute_command`: Run terminal commands securely (including SSH and remote commands)
-
 
 ## Security
 
@@ -52,12 +51,26 @@ git clone https://github.com/dillip285/mcp-terminal.git
 # Install dependencies
 npm install
 
+# Configure npm authentication
+cp .npmrc.example .npmrc
+# Edit .npmrc and add your NPM_TOKEN
+
 # Run tests
 npm test
 
 # Build the project
 npm run build
 ```
+
+## Publishing
+
+To publish the package:
+
+1. Copy `.npmrc.example` to `.npmrc`
+2. Add your npm authentication token to `.npmrc`
+3. Run `npm publish --access public`
+
+Note: Never commit your `.npmrc` file with the authentication token. It is already added to `.gitignore`.
 
 ## Contributing
 
