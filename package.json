@@ -1,6 +1,6 @@
 {
   "name": "@dillip285/mcp-terminal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP Terminal Server - Execute commands within allowed paths",
   "type": "module",
   "main": "build/index.js",
