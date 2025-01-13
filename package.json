@@ -1,5 +1,5 @@
 {
-  "name": "@indiestack/mcp-terminal",
+  "name": "@dillip285/mcp-terminal",
   "version": "1.0.0",
   "description": "MCP Terminal Server - Execute commands within allowed paths",
   "type": "module",
@@ -52,5 +52,8 @@
   },
   "engines": {
     "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

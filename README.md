@@ -20,7 +20,7 @@ Add the server configuration to your Claude Desktop config file:
     "terminal": {
       "command": "npx",
       "args": [
-        "@indiestack/mcp-terminal",
+        "@dillip285/mcp-terminal",
         "--allowed-paths",
         "/path/to/allowed/directory"
       ]
